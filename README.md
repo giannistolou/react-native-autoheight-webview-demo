@@ -1,6 +1,6 @@
 # react-native-autoheight-webview-demo
 
-This is a demo React Native project showcasing the usage of the `react-native-autoheight-webview` library. It demonstrates how to seamlessly integrate auto-height WebView components within a React Native application.
+This is a demo React Native project showcasing the usage of the `@brown-bear/react-native-autoheight-webview` library. It demonstrates how to seamlessly integrate auto-height WebView components within a React Native application.
 
 ## Features
 
@@ -71,7 +71,7 @@ yarn ios
 
 ## Usage
 
-This demo project uses the `react-native-autoheight-webview` library to render web content inside a WebView that automatically adjusts its height. You can explore and modify `App.tsx` to customize the WebView behavior and demonstrate different use cases.
+This demo project uses the `@brown-bear/react-native-autoheight-webview` library to render web content inside a WebView that automatically adjusts its height. You can explore and modify `App.tsx` to customize the WebView behavior and demonstrate different use cases.
 
 ## Contributing
 

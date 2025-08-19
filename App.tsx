@@ -17,7 +17,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import AutoHeightWebView from 'react-native-autoheight-webview';
+import AutoHeightWebView from '@brown-bear/react-native-autoheight-webview';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
