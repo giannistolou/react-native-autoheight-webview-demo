@@ -5,7 +5,7 @@ This is a demo React Native project showcasing the usage of the `react-native-au
 ## Features
 
 - Auto-height WebView that dynamically adjusts its height based on the content.
-- Simple setup using the `react-native-autoheight-webview` library.
+- Simple setup using the `@brown-bear/react-native-autoheight-webview` library.
 - Compatible with Android and iOS.
 - Demonstrates usage with a clean boilerplate React Native application.
 
