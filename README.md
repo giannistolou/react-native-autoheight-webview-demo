@@ -12,7 +12,7 @@ This is a demo React Native project showcasing the usage of the `react-native-au
 
 ## Demo
 
-![Demo GIF](.demo.gif)  
+![Demo GIF](./demo.gif)  
 
 
 ## Getting Started
