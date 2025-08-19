@@ -46,23 +46,62 @@ function AppContent() {
       ]}
     >
       <ScrollView>
-      <Text>Website Preview</Text>
-      <AutoHeightWebView
-        scalesPageToFit={true}
-        viewportContent={'width=device-width, user-scalable=no'}
-        source={{
-          uri: 'https://github.com/giannistolou/react-native-autoheight-webview/tree/master',
-        }}
+        <Text style={styles.title}>Website Preview</Text>
+        <AutoHeightWebView
+          scalesPageToFit={true}
+          viewportContent={'width=device-width, user-scalable=no'}
+          source={{
+            uri: 'https://github.com/giannistolou/react-native-autoheight-webview/tree/master',
+          }}
         />
-      <Text>Static html preview</Text>
-      <AutoHeightWebView
-        style={styles.webView}
-        scalesPageToFit={true}
-        viewportContent={'width=device-width, user-scalable=no'}
-        source={{
-          html: htmlContent,
-        }}
-      />
+        <Text style={styles.title}>Static html preview</Text>
+        <AutoHeightWebView
+          style={styles.webView}
+          scalesPageToFit={true}
+          viewportContent={'width=device-width, user-scalable=no'}
+          source={{
+            html: htmlContent,
+          }}
+        />
+        <Text style={styles.title}>Custom style css</Text>
+        <AutoHeightWebView
+          style={styles.webView}
+          customStyle={`
+          * {
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+          }
+          body{
+          background-color:red;
+          }
+          p {
+          background-color: green;
+          }
+          p:nth-child(2) {
+          font-weight: bold;
+          }
+           p:nth-child(3) {
+          color: yellow;
+          }
+        `}
+          scalesPageToFit={true}
+          viewportContent={'width=device-width, user-scalable=no'}
+          source={{
+            html: htmlContent,
+          }}
+        />
+        <Text style={styles.title}>Custom style javascript</Text>
+        <AutoHeightWebView
+          style={styles.webView}
+          customScript={`document.body.style.backgroundColor = 'yellow';`}
+          scalesPageToFit={true}
+          viewportContent={'width=device-width, user-scalable=no'}
+          source={{
+            html: htmlContent,
+          }}
+        />
       </ScrollView>
     </View>
   );
@@ -75,8 +114,16 @@ const styles = StyleSheet.create({
   webView: {
     paddingHorizontal: 16,
   },
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginTop: 32,
+    marginBottom: 16,
+    color: '#22223b',
+    letterSpacing: 0.5,
+    textAlign: 'center',
+  },
 });
-
 
 const htmlContent = `<p>
 Tincidunt id eu rutrum dui platea nec velit urna nunc. Sapien nibh habitant a cras suscipit ipsum curae; quam. Cras libero vestibulum aptent venenatis congue per varius nulla, accumsan mus velit orci. Rhoncus consectetur est eu pulvinar. Felis diam vulputate ad pharetra ullamcorper primis torquent. Molestie platea venenatis cursus justo potenti aliquam montes viverra blandit class. Enim tempor nisi in ultrices nibh. Viverra.
@@ -108,5 +155,5 @@ Ultricies quisque vitae consectetur nunc parturient dis. Dictum nisl nam aenean 
 <p>
 Aenean dui eros odio mauris fermentum tincidunt primis viverra! Dui quisque justo ornare, sagittis primis luctus tincidunt! Consectetur platea facilisi luctus inceptos nam taciti praesent himenaeos neque diam. Quam ipsum tristique lobortis pharetra tempor aliquam suscipit? Habitant duis porttitor lectus. Lacus ridiculus posuere inceptos placerat sit. Neque hendrerit imperdiet a ullamcorper eros maecenas aptent hac lacus. Id montes mi odio integer faucibus interdum duis. Iaculis pellentesque sem aliquam risus auctor tincidunt sollicitudin? Ligula pretium donec libero nibh. Vulputate natoque nisi velit? Litora dui ridiculus, vestibulum mollis habitant tellus quisque suscipit conubia. Hac sapien justo diam, turpis habitant maecenas congue mollis suspendisse phasellus. Risus taciti eget placerat. Ut varius elit aliquet curabitur rutrum, taciti risus pharetra at posuere vestibulum accumsan? Elit suscipit congue!
 </p>
-`
+`;
 export default App;
